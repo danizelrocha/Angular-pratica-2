@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+//Services
+import { FoodListService } from 'src/app/service/food-list.service';
+
 @Component({
   selector: 'app-food-add',
   templateUrl: './food-add.component.html',
@@ -7,12 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodAddComponent implements OnInit {
 
-  constructor() { }
+  constructor(private foodListService: FoodListService) { }
 
   ngOnInit(): void {
   }
   public listAddItem(valeu: string){
-    console.log(valeu);
+    return this.foodListService.foodListAdd(valeu);
   }
 
 }

@@ -7,16 +7,16 @@ import { TitleComponent } from './title/title.component';
 import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        TitleComponent
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        SharedModule
-    ]
+  declarations: [
+    AppComponent,
+    TitleComponent
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule
+  ]
 })
 export class AppModule { }
