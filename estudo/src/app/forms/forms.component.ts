@@ -21,7 +21,8 @@ export class FormsComponent implements OnInit {
  }
 
  public submitForm(form: NgForm){
-  console.log(form.value)
+  if (form.valid){
+    console.log(form.value)
+  }
  }
-
 }
