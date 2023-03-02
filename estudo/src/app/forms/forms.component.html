@@ -1,45 +1,69 @@
 <form>
-  <label >
+  <label>
     Nome:
-    <input type="text" name="nome" ngModel>
+    <input
+      type="text"
+      name="nome"
+      #nome="ngModel"
+      [ngModel]="nome.value"
+      required=""
+    />
+    <span *ngIf="nome.invalid && (nome.dirty && nome.touched)">
+       Invalid
+    </span>
   </label>
-  <br>
-
-  <label >
+  <br />
+  <br />
+  {{ nome.valid }}
+  {{ nome.dirty }}
+  {{ nome.touched }}
+  <br />
+  <br />
+  <label>
     Masculino:
-    <input type="radio" name="sexo" value="Masculino" ngModel>
+    <input
+     type="radio"
+     name="sexo"
+     value="Masculino"
+     ngModel
+   />
   </label>
-  <br>
-
-  <label >
+  <br />
+  <br />
+  <label>
     Feminino:
-    <input type="radio" name="sexo" value="Feminino" ngModel>
+    <input type="radio" name="sexo" value="Feminino" ngModel />
   </label>
-  <br>
+  <br />
+  <br />
 
-  <label >
+  <label>
     Outros:
-    <input type="radio" name="sexo" value="Outros" ngModel>
+    <input type="radio" name="sexo" value="Outros" ngModel />
   </label>
-  <br>
+  <br />
+  <br />
 
-  <label >
+  <label>
     Angular:
-    <input type="checkbox" name="angular" ngModel>
+    <input type="checkbox" name="angular" ngModel />
   </label>
-  <br>
+  <br />
+  <br />
 
-  <label >
+  <label>
     Vue:
-    <input type="checkbox" name="vue" ngModel>
+    <input type="checkbox" name="vue" ngModel />
   </label>
-  <br>
+  <br />
+  <br />
 
-  <label >
+  <label>
     React:
-    <input type="checkbox" name="react" ngModel>
+    <input type="checkbox" name="react" ngModel />
   </label>
-  <br>
+  <br />
+  <br />
 
   <select name="comidas" ngModel>
     <option value="">Selecione a sua opção</option>
@@ -47,5 +71,4 @@
       {{ item.comida }} - {{ item.preco }}
     </option>
   </select>
-
 </form>

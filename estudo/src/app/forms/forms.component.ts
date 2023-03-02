@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss']
 })
-export class FormsComponent implements OnInit{
+export class FormsComponent implements OnInit {
 
   public listComidas: Array<{comida: string, preco: any}> = [
     { comida:"X Bacon",preco:"R$28,00"},
