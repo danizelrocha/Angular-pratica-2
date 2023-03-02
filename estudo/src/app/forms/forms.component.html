@@ -41,4 +41,11 @@
   </label>
   <br>
 
+  <select name="comidas" ngModel>
+    <option value="">Selecione a sua opção</option>
+    <option *ngFor="let item of listComidas" [ngValue]="item">
+      {{ item.comida }} - {{ item.preco }}
+    </option>
+  </select>
+
 </form>
