@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-forms',
@@ -14,11 +15,13 @@ export class FormsComponent implements OnInit {
     { comida:"X Coxinha", preco:"R$8,00"}
   ];
 
-
   constructor() {}
 
   ngOnInit(): void {
+ }
 
-  }
+ public submitForm(form: NgForm){
+  console.log(form.value)
+ }
 
 }
